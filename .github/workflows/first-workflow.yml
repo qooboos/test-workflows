@@ -15,8 +15,12 @@ jobs:
           fetch-depth: 0
       - name: Print some variables
         run: |
-          echo "Github ref: ${{github.ref}}"
-          echo "Github event ref: ${{github.event.ref}}"
+          echo "github.ref: ${{github.ref}}"
+          echo "github.action: ${{github.action}}"
+          echo "github.action_ref: ${{github.action_ref}}"
+          echo "github.event: ${{github.event}}"
+          echo "github.head_ref: ${{github.head_ref}}"
+          echo "github.ref_name: ${{github.ref_name}}"
       - name: Delete branch
         run: |
           git push origin --delete ${{github.ref}}-deploy || true 
