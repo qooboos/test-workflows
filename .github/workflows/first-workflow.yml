@@ -21,6 +21,7 @@ jobs:
           echo "github.event: ${{github.event}}"
           echo "github.head_ref: ${{github.head_ref}}"
           echo "github.ref_name: ${{github.ref_name}}"
+          echo "github.event.ref: ${{github.event.ref}}"
       - name: Delete branch
         run: |
           git push origin --delete ${{github.ref}}-deploy || true 
