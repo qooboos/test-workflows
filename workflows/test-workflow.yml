@@ -1,0 +1,21 @@
+name: First workflow
+
+on:
+  push:
+    branch: [dev]
+
+jobs:
+  cleanup:
+    name: Print on push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+      - uses: actions/checkout@latest
+        with:
+          fetch-depth: 0
+      - name: Print anything
+        run: |
+          echo "Whatever"
+
+           
+          
